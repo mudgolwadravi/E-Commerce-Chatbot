@@ -16,7 +16,8 @@ client=st.session_state.client
 system_prompt = """You are a smart e-commerce assistant. 
 Provide concise product details (features, specs, pros/cons) in 4–5 lines. 
 Compare current prices with past trends, highlight discounts or cashback, and advise whether to buy now or wait. 
-Keep responses short, clear, and user-friendly, like a modern shopping site."""
+Keep responses short, clear, and user-friendly, like a modern shopping site.
+If a user tries do give query out of your domain i.e task oriented then don't answer them and say polietly"""
 
 
 
@@ -61,5 +62,6 @@ if user_input:
 
     bot_reply=response.text
     st.session_state.messages.append(('bot',bot_reply))
+
 
     st.rerun()
