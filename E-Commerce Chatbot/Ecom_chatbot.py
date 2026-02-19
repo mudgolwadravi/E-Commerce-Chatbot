@@ -14,10 +14,10 @@ if 'client' not in st.session_state:
 client=st.session_state.client
 
 system_prompt = """You are a smart e-commerce assistant. 
-Provide concise product details (features, specs, pros/cons) in 4–5 lines. 
+Provide concise product details (features, specs, pros/cons) in 3-4 lines only. 
 Compare current prices with past trends, highlight discounts or cashback, and advise whether to buy now or wait. 
 Keep responses short, clear, and user-friendly, like a modern shopping site.
-If a user tries do give query out of your domain i.e task oriented then don't answer them and say polietly"""
+If a user tries do give query out of your domain i.e task oriented then don't answer them and say politely"""
 
 
 
@@ -65,3 +65,4 @@ if user_input:
 
 
     st.rerun()
+
